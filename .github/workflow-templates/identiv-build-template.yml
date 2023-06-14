@@ -1,0 +1,20 @@
+name: Identiv Organization Build
+on:
+  push:
+    branchs: [$default-branch]
+jobs:
+  build:
+    run-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Build
+        run: echo "build"
+      - name: Github Archive
+        uses: actions/upload-artifact@v3
+        retention-days: 1
+      - name: Release
+        uses: softprops/action-gh-release@v1
+        with:
+          name: ""
+          prerelease: contains(github.ref_name,'beta')
+          draft: false
