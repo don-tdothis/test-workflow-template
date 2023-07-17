@@ -1,15 +1,7 @@
 version: 3
 automerge: true
 defaults:
-  workflow: custom_workflow
+    terraform_version: v1.2.9
 projects:
-  - dir: tf
-workflows:
-  custom_workflow:
-    plan:
-      steps:
-        - env:
-            name: FOO
-            value: BAR
-        - init
-        - plan
+  - dir: test-workflow-template
+    autoplan: true
