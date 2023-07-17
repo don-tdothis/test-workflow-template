@@ -1,8 +1,8 @@
 version: 3
 defaults:
   workflow: custom_workflow
-  roles:
-    aws: arn:aws:iam::624472603577:role/test-terrahaxs
+  worker_hosting:
+    type: github_actions
 projects:
   - dir: tf
     apply_requirements: [mergeable, approved]
