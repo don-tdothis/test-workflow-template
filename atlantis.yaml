@@ -3,7 +3,7 @@ automerge: true
 defaults:
   workflow: custom_workflow
 projects:
-  - dir: dir1
+  - dir: tf
 workflows:
   custom_workflow:
     plan:
