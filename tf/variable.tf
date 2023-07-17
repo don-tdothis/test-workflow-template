@@ -9,3 +9,7 @@ variable "lb_domain_name" {
 variable "lb_domain" {
   default = ""
 }
+
+variable "test_name" {
+  default = "name"
+}
