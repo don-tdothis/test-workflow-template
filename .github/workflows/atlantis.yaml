@@ -1,0 +1,17 @@
+version: 3
+automerge: true
+defaults:
+  workflow: custom_workflow
+  roles:
+    aws: arn:aws:iam::000000000000:role/terrahaxs-worker
+projects:
+  - dir: dir1
+workflows:
+  custom_workflow:
+    plan:
+      steps:
+        - env:
+            name: FOO
+            value: BAR
+        - init
+        - plan
