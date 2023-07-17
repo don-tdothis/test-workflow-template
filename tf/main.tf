@@ -12,6 +12,7 @@
 
 locals {
   region    = "us-west-2"
+  name      = "test"
 }
 
 provider "aws" {
