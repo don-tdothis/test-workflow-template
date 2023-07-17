@@ -1,17 +1,13 @@
 version: 3
-automerge: true
 defaults:
-  workflow: custom_workflow
-  roles:
-    aws: arn:aws:iam::000000000000:role/terrahaxs-worker
+  worker_hosting:
+    type: github_actions
 projects:
-  - dir: dir1
-workflows:
-  custom_workflow:
-    plan:
-      steps:
-        - env:
-            name: FOO
-            value: BAR
-        - init
-        - plan
+  - dir: cloud
+    worker_hosting:
+      type: terrahaxs
+#   - dir: on-prem
+#     worker_hosting:
+#       type: self
+#       worker_url: https://my.worker.com
+  - dir: gha
