@@ -1,18 +1,18 @@
 version: 3
-automerge: true
 defaults:
   workflow: custom_workflow
   roles:
     aws: arn:aws:iam::624472603577:role/test-terrahaxs
 projects:
-  - dir: tf.*
+  - dir: tf
     apply_requirements: [mergeable, approved]
 workflows:
   custom_workflow:
     plan:
       steps:
-        - env:
-            name: FOO
-            value: BAR
         - init
         - plan
+    apply:
+      steps:
+        - init
+        - apply
