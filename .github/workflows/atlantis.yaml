@@ -6,8 +6,8 @@ projects:
   - dir: cloud
     worker_hosting:
       type: terrahaxs
-  - dir: on-prem
-    worker_hosting:
-      type: self
-      worker_url: https://my.worker.com
+#   - dir: on-prem
+#     worker_hosting:
+#       type: self
+#       worker_url: https://my.worker.com
   - dir: gha
