@@ -1,7 +1,17 @@
 version: 3
 automerge: true
 defaults:
-    terraform_version: v1.2.9
+  workflow: custom_workflow
+  roles:
+    aws: arn:aws:iam::624472603577:role/test-terrahaxs
 projects:
   - dir: tf.*
-    autoplan: true
+workflows:
+  custom_workflow:
+    plan:
+      steps:
+        - env:
+            name: FOO
+            value: BAR
+        - init
+        - plan
