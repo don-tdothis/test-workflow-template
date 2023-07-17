@@ -5,3 +5,7 @@ variable "route_zone_name" {
 variable "lb_domain_name" {
   default = "work.test.com"
 }
+
+variable "lb_domain" {
+  default = ""
+}
