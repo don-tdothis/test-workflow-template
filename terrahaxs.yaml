@@ -1,0 +1,13 @@
+version: 3
+defaults:
+  worker_hosting:
+    type: github_actions
+projects:
+  - dir: cloud
+    worker_hosting:
+      type: terrahaxs
+#   - dir: on-prem
+#     worker_hosting:
+#       type: self
+#       worker_url: https://my.worker.com
+  - dir: gha
