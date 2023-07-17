@@ -6,6 +6,7 @@ defaults:
     aws: arn:aws:iam::624472603577:role/test-terrahaxs
 projects:
   - dir: tf.*
+    apply_requirements: [mergeable, approved]
 workflows:
   custom_workflow:
     plan:
